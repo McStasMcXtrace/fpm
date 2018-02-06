@@ -144,9 +144,9 @@ class FPM::Package::APK< FPM::Package
     scripts = {}
 
     scripts = register_script('post-install',   :after_install,   scripts)
-    scripts = register_script('post-install',   :before_install,  scripts)
-    scripts = register_script('post-install',   :before_upgrade,  scripts)
-    scripts = register_script('post-install',   :after_upgrade,  scripts)
+    scripts = register_script('pre-install',   :before_install,  scripts)
+    scripts = register_script('pre-upgrade',   :before_upgrade,  scripts)
+    scripts = register_script('post-upgrade',   :after_upgrade,  scripts)
     scripts = register_script('pre-deinstall',  :before_remove,   scripts)
     scripts = register_script('post-deinstall', :after_remove,    scripts)
 
@@ -238,7 +238,7 @@ class FPM::Package::APK< FPM::Package
         record_length = determine_record_length(record_length)
 
         until(data.length == record_length)
-          data += file.read(TAR_CHUNK_SIZE)
+          data << file.read(TAR_CHUNK_SIZE)
         end
 
         # Clear ownership fields

@@ -1,7 +1,12 @@
+fpm
+===
+
+|Build| |Chat| |Gem|
+
 The goal of fpm is to make it easy and quick to build packages such as rpms,
 debs, OSX packages, etc.
 
-fpm, as a project, exists with the following principles in mind:
+fpm, as a project, exists to help you build packages, therefore:
 
 * If fpm is not helping you make packages easily, then there is a bug in fpm.
 * If you are having a bad time with fpm, then there is a bug in fpm.
@@ -15,6 +20,18 @@ report a bug/problem/whatever, I welcome you to do on `the project issue tracker
 You can find out how to use fpm in the `documentation`_.
 
 .. _documentation: https://fpm.readthedocs.io/en/latest/
+
+You can learn how to install fpm on your platform in the `installation guide`_.
+
+.. _installation guide: http://fpm.readthedocs.io/en/latest/installing.html
+
+Project Principles
+------------------
+
+* Community: If a newbie has a bad time, it's a bug.
+* Engineering: Make it work, then make it right, then make it fast.
+* Capabilities: If it doesn't do a thing today, we can make it do it tomorrow.
+
 
 Backstory
 ---------
@@ -79,3 +96,10 @@ Targets:
 * pacman (ArchLinux) packages
 
 .. include: docs/contributing
+
+.. |Build| image:: https://img.shields.io/travis/jordansissel/fpm.svg
+   :target: https://travis-ci.org/jordansissel/fpm
+.. |Chat| image:: https://img.shields.io/badge/irc-%23fpm%20on%20freenode-brightgreen.svg
+   :target: https://webchat.freenode.net/?channels=fpm
+.. |Gem| image:: https://img.shields.io/gem/v/fpm.svg
+   :target: https://rubygems.org/gems/fpm

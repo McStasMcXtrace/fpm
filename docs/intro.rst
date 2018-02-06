@@ -8,7 +8,10 @@ Building a package might look something like this:
     fpm -s <source type> -t <target type> [list of sources]...
 
 "Source type" is what your package is coming from; a directory (dir), a rubygem
-(gem), an rpm (rpm), a python package (python), a php pear module (pear), etc.
+(gem), an rpm (rpm), a python package (python), a php pear module (pear), see
+the `full list`_.
+
+.. _full list: https://fpm.readthedocs.io/en/latest/packages.html
 
 "Target type" is what your output package form should be. Most common are "rpm"
 and "deb" but others exist (solaris, etc)
@@ -16,14 +19,14 @@ and "deb" but others exist (solaris, etc)
 You have a few options for learning to run FPM:
 
 1. If you're impatient, just scan through `fpm --help`; you'll need various
-   options, and they're reasonably straightforward. Impatient learning is
-   totally welcome, and if you run into issues, ask questions in #fpm on
-   freenode irc or on fpm-users@googlegroups.com!
+   options, and we try to make them well-documented. Quick learning is
+   totally welcome, and if you run into issues, you are welcome to ask
+   questions in #fpm on freenode irc or on fpm-users@googlegroups.com!
 2. `The documentation`_ has explanations and examples. If you run into
    problems, I welcome you to ask questions in #fpm on freenode irc or on
    fpm-users@googlegroups.com!
 
-.. _The documentation: https://semicomplete.com/projects/fpm/index.html
+.. _The documentation: http://fpm.readthedocs.io/en/latest/intro.html
 
 To give you an idea of what fpm can do, here's a few use cases:
 
@@ -47,7 +50,6 @@ Change properties of an existing rpm::
 
 Create an deb that automatically installs a service::
   fpm -s pleaserun -t deb
-
 
 Below is a 10-minute video demonstrating fpm's simplicity of use:
 
